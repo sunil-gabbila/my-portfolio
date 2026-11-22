@@ -1,0 +1,88 @@
+/* src/styles/global.css */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  --color-bg: #f4f1e8;
+  --color-surface: #fffdf8;
+  --color-surface-hover: #eeede5;
+  --color-primary: #2457a7;
+  --color-secondary: #357b72;
+  --color-coral: #b85c4a;
+  --color-text: #192231;
+  --color-muted: #68717d;
+  --color-border: rgba(25,34,49,0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: radial-gradient(circle at 14% 18%, rgba(36,87,167,.055), transparent 25%), radial-gradient(circle at 86% 9%, rgba(184,92,74,.045), transparent 22%), linear-gradient(rgba(25,34,49,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(25,34,49,.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font: inherit;
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+.page-section {
+  min-height: calc(100vh - 70px);
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.page-kicker {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .75rem;
+  margin-bottom: .75rem;
+}
+
+.page-title {
+  color: var(--color-text);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-primary);
+}
+
+.page-title,
+.overview-copy h1,
+.directory-heading h2 {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}

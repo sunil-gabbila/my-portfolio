@@ -1,0 +1,17 @@
+.section { max-width: 1100px; margin: 0 auto; }
+.section-title { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1.5rem; }
+.section-subtitle { color: var(--color-muted); margin-bottom: 2rem; }
+.section-text { max-width: 800px; color: var(--color-text); }
+.about-cards, .contact-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+.about-card, .contact-card { border: 1px solid var(--color-border); border-radius: 8px; padding: 1.35rem; background: var(--color-surface); transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.about-card:hover, .contact-card:hover { transform: translateY(-4px); border-color: rgba(36,87,167,.24); background: var(--color-surface-hover); }
+.about-card h3, .contact-card h3 { color: var(--color-secondary); }
+.timeline { border-left: 1px solid var(--color-border); margin: 1.5rem 0 2.5rem; }
+.timeline-item { position: relative; padding: 0 0 2rem 1.5rem; }
+.timeline-item::before { content: ''; position: absolute; left: -5px; top: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--color-primary); }
+.timeline-content h3 { margin-bottom: .35rem; color: var(--color-text); }
+.timeline-content h2 { color: var(--color-text); }
+.timeline-content ul { padding-left: 1.25rem; margin-top: .75rem; }
+.period, .institution { color: var(--color-muted); display: block; }
+.subsection-title { margin: 1rem 0; }
+@media (max-width: 700px) { .about-cards, .contact-cards { grid-template-columns: 1fr; } }

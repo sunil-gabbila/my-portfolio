@@ -1,0 +1,6 @@
+.contact-section { max-width: 900px; }
+.contact-form { display: grid; gap: 1rem; margin-top: 2rem; }
+.form-group { display: grid; gap: .35rem; }
+.form-group input, .form-group textarea { width: 100%; border: 1px solid var(--color-border); border-radius: 6px; padding: .75rem; background: var(--color-surface); color: var(--color-text); outline: none; transition: border-color .2s ease, background .2s ease; }
+.form-group input:focus, .form-group textarea:focus { border-color: var(--color-secondary); background: var(--color-surface-hover); }
+.error-msg { color: #ff7b72; font-size: .85rem; }.success-msg { color: var(--color-secondary); }

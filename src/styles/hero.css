@@ -1,0 +1,17 @@
+.hero-section { min-height: 100vh; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 3rem; padding-top: 8rem; }
+.intro-label { color: var(--color-secondary); font-size: .75rem; letter-spacing: 1px; margin-bottom: 1.25rem; }
+.main-heading { max-width: 720px; font-size: clamp(3rem, 7vw, 6.5rem); line-height: 1.05; color: var(--color-text); }
+.accent { color: var(--color-primary); }
+.intro-text { max-width: 650px; margin: 1.5rem 0; color: var(--color-muted); font-size: 1.1rem; }
+.roles-list { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin: 1.5rem 0; list-style-position: inside; }
+.hero-buttons, .card-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; border-radius: 6px; padding: .75rem 1rem; }
+.btn.primary { background: var(--color-primary); color: #fffdf8; }
+.btn.secondary { border: 1px solid var(--color-border); color: var(--color-text); }
+.icon-btn { border: 1px solid var(--color-primary); }
+.terminal { width: 100%; max-width: 480px; margin-left: auto; border: 1px solid var(--color-border); border-radius: 8px; background: #202735; box-shadow: 0 20px 60px rgba(25,34,49,.12); }
+.terminal-header { height: 38px; display: flex; align-items: center; gap: 7px; padding: 0 12px; border-bottom: 1px solid var(--color-border); }
+.dot { width: 10px; height: 10px; border-radius: 50%; }.dot.red{background:#ff5f56}.dot.yellow{background:#ffbd2e}.dot.green{background:#27c93f}
+.terminal-body { min-height: 240px; padding: 1.25rem; }.terminal-body pre { white-space: pre-wrap; color: #b8f7ee; margin-bottom: .5rem; }.cursor { display:inline-block;width:8px;height:1.1em;background:var(--color-primary);animation:blink 1s steps(1) infinite }@keyframes blink{50%{opacity:0}}
+.scroll-indicator { display: none; }
+@media (max-width: 900px) { .hero-section { grid-template-columns: 1fr; padding-top: 7rem; } .hero-visual { margin-bottom: 2rem; } .terminal { margin: 0 auto; } }

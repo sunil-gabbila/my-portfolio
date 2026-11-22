@@ -1,0 +1,6 @@
+.github-profile { margin: 1.5rem 0; }
+.github-link { display: inline-flex; align-items: center; gap: .75rem; }.avatar { width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--color-border); }
+.repo-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
+.repo-card { border: 1px solid var(--color-border); border-radius: 8px; padding: 1.25rem; background: var(--color-surface); transition: transform .2s ease, border-color .2s ease; }.repo-card:hover { transform: translateY(-4px); border-color: rgba(53,123,114,.35); }.repo-name a { color: var(--color-primary); }.repo-desc { margin: .75rem 0; color: var(--color-muted); }
+.repo-meta { display:flex; flex-wrap:wrap; gap:.75rem; font-size:.8rem; color:var(--color-muted); }.error { color:#ff7b72; }
+@media (max-width:900px){.repo-grid{grid-template-columns:repeat(2,1fr)}}@media (max-width:600px){.repo-grid{grid-template-columns:1fr}}
