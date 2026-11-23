@@ -5,7 +5,7 @@ import '../styles/projects.css';
 const ProjectCard = ({ project }) => {
   const { title, category, description, technologies, repo, liveDemo } = project;
   return (
-    <div className="project-card">
+    <Link to={`/project/${project.id}`} className="project-link"><div className="project-card">
       <div className="card-header">
         <h3>{title}</h3>
         <span className="category">{category}</span>
