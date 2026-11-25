@@ -1,5 +1,6 @@
 .skills-section { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
-.skills-section .section-title { grid-column: 1 / -1; }
+.skills-section { align-content: safe center; }
+.skills-section .page-title { grid-column: 1 / -1; }
 .skill-category { border: 1px solid var(--color-border); border-radius: 8px; padding: 1.35rem; background: var(--color-surface); transition: border-color .2s ease, transform .2s ease; }
 .skill-category:hover { transform: translateY(-3px); border-color: rgba(134,170,163,.35); }
 .category-title { margin-bottom: 1rem; color: var(--color-secondary); }

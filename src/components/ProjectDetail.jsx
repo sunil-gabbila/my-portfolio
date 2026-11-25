@@ -17,7 +17,18 @@ const ProjectDetail = () => {
     );
   }
 
-  const { title, category, description, features, technologies, repo, liveDemo } = project;
+  const {
+    title,
+    category,
+    description,
+    features,
+    technologies,
+    technologyGroups,
+    responsibilities,
+    recognition,
+    repo,
+    liveDemo
+  } = project;
 
   return (
     <section className="project-detail">
@@ -30,17 +41,52 @@ const ProjectDetail = () => {
           <li key={i}>{f}</li>
         ))}
       </ul>
-      <h3>Technologies</h3>
-      <ul className="tech-list">
-        {technologies.map((tech) => (
-          <li key={tech} className="tech-item">{tech}</li>
-        ))}
-      </ul>
+      {responsibilities && (
+        <section className="detail-section">
+          <h3>Responsibilities</h3>
+          <ul className="responsibilities-list">
+            {responsibilities.map((responsibility) => (
+              <li key={responsibility}>{responsibility}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+      <section className="detail-section">
+        <h3>Technology Stack</h3>
+        {technologyGroups ? (
+          <div className="technology-groups">
+            {Object.entries(technologyGroups).map(([group, items]) => (
+              <div className="technology-group" key={group}>
+                <h4>{group}</h4>
+                <ul className="tech-list">
+                  {items.map((tech) => (
+                    <li key={tech} className="tech-item">{tech}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <ul className="tech-list">
+            {technologies.map((tech) => (
+              <li key={tech} className="tech-item">{tech}</li>
+            ))}
+          </ul>
+        )}
+      </section>
+      {recognition && (
+        <section className="detail-section recognition">
+          <h3>Recognition</h3>
+          <p>{recognition}</p>
+        </section>
+      )}
       <div className="actions">
         {liveDemo && liveDemo !== "#" && (
           <a href={liveDemo} target="_blank" rel="noopener noreferrer" className="btn primary">Live Demo</a>
         )}
-        <a href={repo} target="_blank" rel="noopener noreferrer" className="btn secondary">Repository</a>
+        {repo && (
+          <a href={repo} target="_blank" rel="noopener noreferrer" className="btn secondary">Repository</a>
+        )}
         <Link to="/projects" className="btn secondary">Back to Projects</Link>
       </div>
     </section>

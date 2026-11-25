@@ -1,0 +1,59 @@
+/* src/styles/projectDetail.css */
+.project-detail {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--color-text);
+}
+.project-detail h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+.project-detail .category {
+  font-style: italic;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+.project-detail .description {
+  margin-bottom: 1.5rem;
+}
+.project-detail .detail-section {
+  margin-top: 2rem;
+}
+.project-detail .detail-section h3 {
+  margin-bottom: 0.8rem;
+}
+.project-detail .features-list,
+.project-detail .responsibilities-list {
+  list-style: disc inside;
+  margin-left: 1rem;
+  display: grid;
+  gap: 0.65rem;
+}
+.project-detail .technology-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+.project-detail .technology-group h4 {
+  margin-bottom: 0.65rem;
+}
+.project-detail .tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.project-detail .tech-item {
+  margin: 0;
+}
+.project-detail .recognition p {
+  margin: 0;
+}
+.project-detail .actions .btn {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}

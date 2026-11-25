@@ -5,10 +5,15 @@
 .intro-text { max-width: 650px; margin: 1.5rem 0; color: var(--color-muted); font-size: 1.1rem; }
 .roles-list { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin: 1.5rem 0; list-style-position: inside; }
 .hero-buttons, .card-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; border-radius: 6px; padding: .75rem 1rem; }
-.btn.primary { background: var(--color-primary); color: #fffdf8; }
-.btn.secondary { border: 1px solid var(--color-border); color: var(--color-text); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; border: 1px solid transparent; border-radius: 6px; padding: .75rem 1rem; transition: transform .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease, color .2s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn:focus-visible, .action-primary:focus-visible, .action-secondary:focus-visible, .back-to-top:focus-visible, .hamburger:focus-visible { outline: 3px solid var(--color-secondary); outline-offset: 3px; }
+.btn.primary { background: var(--color-primary); color: #fffdf8; box-shadow: 0 8px 20px rgba(36,87,167,.14); }
+.btn.primary:hover { background: var(--color-secondary); box-shadow: 0 10px 24px rgba(53,123,114,.2); }
+.btn.secondary { border-color: var(--color-border); color: var(--color-text); background: rgba(255,253,248,.72); }
+.btn.secondary:hover { border-color: var(--color-secondary); background: var(--color-surface-hover); }
 .icon-btn { border: 1px solid var(--color-primary); }
+.icon-btn:hover { border-color: var(--color-secondary); background: var(--color-surface-hover); }
 .terminal { width: 100%; max-width: 480px; margin-left: auto; border: 1px solid var(--color-border); border-radius: 8px; background: #202735; box-shadow: 0 20px 60px rgba(25,34,49,.12); }
 .terminal-header { height: 38px; display: flex; align-items: center; gap: 7px; padding: 0 12px; border-bottom: 1px solid var(--color-border); }
 .dot { width: 10px; height: 10px; border-radius: 50%; }.dot.red{background:#ff5f56}.dot.yellow{background:#ffbd2e}.dot.green{background:#27c93f}

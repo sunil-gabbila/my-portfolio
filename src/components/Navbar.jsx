@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { Github, Linkedin } from 'lucide-react';
 import '../styles/navbar.css';
 
@@ -15,29 +16,34 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Overview', to: '/' },
-    { name: 'About', to: '/about' },
-    { name: 'Skills', to: '/skills' },
-    { name: 'Projects', to: '/projects' },
-    { name: 'Experience', to: '/experience' },
-    { name: 'Education', to: '/education' },
-    { name: 'Contact', to: '/contact' },
+    { name: 'Overview', to: 'hero' },
+    { name: 'About', to: 'about' },
+    { name: 'Skills', to: 'skills' },
+    { name: 'Projects', to: 'projects' },
+    { name: 'Experience', to: 'experience' },
+    { name: 'Education', to: 'education' },
+    { name: 'Contact', to: 'contact' },
   ];
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <NavLink to="/" className="logo" onClick={() => setMobileOpen(false)}>SG.</NavLink>
+      <NavLink to="/" className="logo" onClick={() => setMobileOpen(false)}>Sunil Gabbila</NavLink>
       <div className={`nav-links ${mobileOpen ? 'open' : ''}`}>
         {navLinks.map((link) => (
-          <NavLink
+          <ScrollLink
             key={link.to}
             to={link.to}
-            end={link.to === '/'}
+            href={`#${link.to}`}
+            spy
+            smooth
+            duration={500}
+            offset={-72}
+            activeClass="active"
             onClick={() => setMobileOpen(false)}
-            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            className="nav-link"
           >
             {link.name}
-          </NavLink>
+          </ScrollLink>
         ))}
         <div className="nav-icons">
           <a href="https://github.com/sunil-gabbila" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="icon-link">
