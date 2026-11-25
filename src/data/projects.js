@@ -2,75 +2,49 @@
 export default [
   {
     id: 1,
-    title: "Sales Savvy",
-    category: "Full-Stack E-Commerce Application",
+    title: "FixFlow",
+    category: "Java Microservices Platform",
     description:
-      "A full-stack e-commerce application featuring user authentication, product management, shopping functionality, order processing, and database integration.",
+      "A smart maintenance and complaint management platform built as a Java microservices application.",
     features: [
-      "User registration and login",
-      "Authentication and authorization",
-      "Product management",
-      "Shopping cart functionality",
-      "Order management",
-      "REST API integration",
-      "Database persistence"
+      "Identity management with JWT authentication",
+      "Role-based access control",
+      "Maintenance request and complaint workflows",
+      "Microservices architecture with service integrations",
+      "Persistent data with MySQL"
     ],
-    technologies: ["Java", "Spring Boot", "React", "MySQL", "Hibernate"],
-    liveDemo: "#", // placeholder, user can replace
-    repo: "https://github.com/sunil-gabbila/sales-savvy-ecommerce"
-  },
-  {
-    id: 3,
-    title: "Payment API",
-    category: "Backend API Development",
-    description:
-      "A backend payment API project focused on request validation, payment processing workflows, secure request handling, and backend service architecture.",
-    features: [
-      "Payment API endpoints",
-      "Request/response DTOs",
-      "Validation",
-      "Exception handling",
-      "HMAC-SHA256 signature verification",
-      "Logging",
-      "REST API design"
-    ],
-    technologies: ["Java", "Spring Boot", "REST APIs", "HMAC-SHA256", "Maven"],
-    liveDemo: "#",
+    technologies: ["Java 21", "Spring Boot", "Spring Cloud", "Microservices", "Apache Kafka", "MySQL", "React"],
     repo: "https://github.com/sunil-gabbila/fixflow-maintenance-platform"
   },
   {
-    id: 4,
-    title: "Advanced DSA Patterns",
-    category: "Problem Solving",
+    id: 2,
+    title: "Café Management System",
+    category: "Full-Stack Application",
     description:
-      "A structured collection of programming problems and solutions focused on advanced prefix sums, array patterns, optimization, and algorithmic problem solving.",
+      "A café operations application combining an Angular interface with Spring Boot services and MySQL persistence.",
     features: [
-      "Prefix sums",
-      "Running sums",
-      "Range sum queries",
-      "Maximum prefix sum",
-      "Array optimization",
-      "Time complexity",
-      "Space complexity"
+      "Menu management",
+      "Order processing",
+      "Billing workflows",
+      "REST API communication",
+      "MySQL-backed data storage"
     ],
-    technologies: ["Java", "Data Structures", "Algorithms"],
-    liveDemo: "#",
-    repo: "https://github.com/sunil-gabbila/fixflow-maintenance-platform"
+    technologies: ["Angular", "Java", "Spring Boot", "MySQL", "REST APIs"]
   },
   {
     id: 5,
-    title: "Payment Integration System (Stripe)",
-    category: "Spring Boot Microservices | AWS",
+    title: "Payment Integration System",
+    category: "Spring Boot Microservices",
     description:
-      "Contributed to a secure, scalable payment integration system built with Java, Spring Boot, and microservices on AWS. The system integrates Stripe checkout sessions, validates payment requests, processes webhooks, and persists payment data.",
+      "A microservices-based payment integration built with Spring Boot and Stripe APIs, including payment validation and webhook processing.",
     features: [
-      "Stripe Checkout Session creation through the Stripe REST API",
-      "Configurable field-level and business-rule payment validation",
+      "Stripe Checkout Session integration",
+      "Payment request validation",
       "Stripe webhook event processing",
-      "HMAC-SHA256 request authentication and integrity checks",
-      "Spring Data JPA persistence for payment entities",
-      "Centralized configuration and consistent API error handling"
+      "Secure request handling and consistent API errors",
+      "Payment persistence with Spring Data JPA and MySQL"
     ],
+    technologies: ["Java", "Spring Boot", "Microservices", "Stripe API", "Spring Security", "Redis", "MySQL", "AWS", "JUnit"],
     technologies: ["Java", "Spring Boot", "Stripe API", "Spring Security", "Redis", "MySQL", "AWS", "JUnit"],
     responsibilities: [
       "Developed the stripe-provider and payment-validation microservices using Java and Spring Boot.",

@@ -22,6 +22,7 @@ const Navbar = () => {
     { name: 'Projects', to: 'projects' },
     { name: 'Experience', to: 'experience' },
     { name: 'Education', to: 'education' },
+    { name: 'Certifications', to: 'certifications' },
     { name: 'Contact', to: 'contact' },
   ];
 
@@ -49,7 +50,7 @@ const Navbar = () => {
           <a href="https://github.com/sunil-gabbila" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="icon-link">
             <Github size={20} />
           </a>
-          <a href="https://www.linkedin.com/in/sunil-gabbila" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="icon-link">
+          <a href="https://www.linkedin.com/in/sunil-gabbila2003" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="icon-link">
             <Linkedin size={20} />
           </a>
         </div>

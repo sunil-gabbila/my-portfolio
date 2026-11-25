@@ -1,8 +1,10 @@
 // src/components/Contact.jsx
 import React, { useState } from 'react';
+import { MapPin } from 'lucide-react';
 import '../styles/contact.css';
 
 const Contact = () => {
+  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL?.trim();
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle, success, error
   const [errors, setErrors] = useState({});
@@ -25,8 +27,11 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
-    // Use mailto link as no backend
-    const mailto = `mailto:sunil.gabbila@example.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
+    if (!contactEmail) {
+      setStatus('unconfigured');
+      return;
+    }
+    const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)}`;
     window.location.href = mailto;
     setStatus('success');
     setForm({ name: '', email: '', subject: '', message: '' });
@@ -40,15 +45,19 @@ const Contact = () => {
       <div className="contact-cards">
         <div className="contact-card">
           <h3>Email</h3>
-          <a href="mailto:sunil.gabbila@example.com">sunil.gabbila@example.com</a>
+          {contactEmail ? <a href={`mailto:${contactEmail}`}>{contactEmail}</a> : <span>Set up via VITE_CONTACT_EMAIL</span>}
         </div>
         <div className="contact-card">
           <h3>GitHub</h3>
           <a href="https://github.com/sunil-gabbila" target="_blank" rel="noopener noreferrer">github.com/sunil-gabbila</a>
         </div>
         <div className="contact-card">
-          <h3>LinkedIn</h3>
-          <a href="https://www.linkedin.com/in/sunil-gabbila" target="_blank" rel="noopener noreferrer">linkedin.com/in/sunil-gabbila</a>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/sunil-gabbila2003" target="_blank" rel="noopener noreferrer">linkedin.com/in/sunil-gabbila2003</a>
+          </div>
+          <div className="contact-card">
+            <h3>Location</h3>
+            <span><MapPin size={16} /> India</span>
         </div>
       </div>
       <form className="contact-form" onSubmit={handleSubmit} noValidate>
@@ -74,6 +83,7 @@ const Contact = () => {
         </div>
         <button type="submit" className="btn primary">Say Hello →</button>
         {status === 'success' && <p className="success-msg">Your email client should open now.</p>}
+        {status === 'unconfigured' && <p className="error-msg">Email delivery is not configured yet. Please contact me through LinkedIn.</p>}
       </form>
     </section>
   );

@@ -41,3 +41,19 @@ npm run dev
 - Contact
 
 The projects and skills displayed on the site are maintained in `src/data/`.
+
+## Contact Form Setup
+
+The contact form opens the visitor's email application using a `mailto:` link. Set `VITE_CONTACT_EMAIL` to Sunil's real contact address in a local `.env` file or in the deployment platform's environment variables. Without this setting, the form explains that email delivery is not configured and directs visitors to LinkedIn. No email address is embedded in the source.
+
+```env
+VITE_CONTACT_EMAIL=your-real-email-address
+```
+
+## Resume
+
+The hero's Download Resume button generates a one-page PDF in the browser from the profile and project details maintained in the portfolio source. Update `src/components/Hero.jsx` when those details change.
+
+## Deployment
+
+Run `npm run build` and deploy the generated `dist/` directory to a static hosting service such as Netlify, Vercel, or GitHub Pages. Configure `VITE_CONTACT_EMAIL` in the host's build environment before deploying. For GitHub Pages, configure the site base path in `vite.config.js` if publishing below a repository subpath.

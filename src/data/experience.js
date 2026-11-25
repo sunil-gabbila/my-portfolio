@@ -2,23 +2,23 @@
 export default {
   experience: [
     {
-      title: "Software Development Engineer Intern",
+      title: "Java Developer Trainee",
       company: "KodNest Technologies",
       period: "2023 - 2024",
       responsibilities: [
-        "Developed Java backend services using Spring Boot",
-        "Implemented REST APIs and integrated with front‑end React components",
-        "Worked with Hibernate/JPA, MySQL for data persistence",
-        "Participated in Agile sprints, code reviews, and CI/CD pipelines"
+        "Completed practical training in Java, Spring Boot, microservices, and REST API development",
+        "Applied Git and Bitbucket workflows while collaborating through Jira",
+        "Worked with relational data using MySQL and SQL",
+        "Practiced Agile ways of working, including sprint-based collaboration"
       ]
     }
   ],
   education: [
     {
-      degree: "Bachelor of Technology",
+      degree: "Bachelor of Engineering",
       field: "Mechanical Engineering",
-      institution: "[Your University]",
-      period: "2019 - 2023",
+      institution: "",
+      period: "2024",
       details: []
     }
   ]

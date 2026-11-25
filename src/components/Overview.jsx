@@ -28,7 +28,7 @@ const Overview = () => {
           </div>
           <div className="overview-socials">
             <a href="https://github.com/sunil-gabbila" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><Github size={19} /></a>
-            <a href="https://www.linkedin.com/in/sunil-gabbila" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={19} /></a>
+            <a href="https://www.linkedin.com/in/sunil-gabbila2003" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={19} /></a>
             <span><MapPin size={16} /> India</span>
           </div>
         </div>

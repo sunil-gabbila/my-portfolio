@@ -15,7 +15,7 @@ const Education = () => {
               <span className="period">{item.period}</span>
               <h2>{item.degree}</h2>
               <h3>{item.field}</h3>
-              <p className="institution">{item.institution}</p>
+              {item.institution && <p className="institution">{item.institution}</p>}
             </div>
           </article>
         ))}
